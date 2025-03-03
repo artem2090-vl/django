@@ -1,16 +1,13 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+
 
 # Create your views here.
 
 def index(request):
-    return HttpResponse("Hello, world. You're at the main index.")
+    return render(request, 'main/index.html')
 
 
 def about(request):
-    return HttpResponse("Page for us")
+    return render(request, 'main/about.html')
 
-
-def help(request):
-    return HttpResponse("Help page")
     
