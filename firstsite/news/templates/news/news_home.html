@@ -7,10 +7,21 @@
 {% block content %}
 <div class="features">
     <h1>Новини</h1>
-    <p>Це має бути сторінка сайту, яка розповість про новини на нашому сайті.</p>
-    <button class="btn btn-danger">Жми сюди</button>
+    {% if news %}
+       {% for el in news %}
+          <div class="alert alert-warning">
+               <h3>{{ el.title }}</h3>
+               <p>{{ el.anons }}</p>
+    {% else %}
+        <p>Новини відсутні</p>
+    {% endif %}
+
+       </div>
 
 
+
+
+   {% endfor %}
 
 </div>
     
